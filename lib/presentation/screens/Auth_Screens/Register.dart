@@ -76,9 +76,9 @@ try {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: SingleChildScrollView(
-          child: Form(
-            key: formstate,
+        child: Form(
+          key: formstate,
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -142,7 +142,7 @@ onSaved:(val){
                   text: 'Register',
                   color: KMainColor,
                   press: () async{
-                    UserCredential response=       await signup();
+                    UserCredential ?response=       await signup();
 print('*************************');
                   if (response !=null) {
                     GoRouter.of(context).go(AppRouter.KLoginScreen);

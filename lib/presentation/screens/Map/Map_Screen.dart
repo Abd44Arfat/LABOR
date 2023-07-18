@@ -18,7 +18,7 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(30.033333, 31.233334),
-    zoom: 19.4746,
+    zoom: 16.4746,
   );
 
   GoogleMapController? myMapController;

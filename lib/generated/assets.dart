@@ -2,17 +2,17 @@
 class Assets {
   Assets._();
 
-
+  static const String assetsMapStyle = 'assets/map_style.txt';
   static const String fontsQuicksandRegular = 'assets/fonts/Quicksand-Regular.ttf';
   static const String iconsArrowLeft = 'assets/icons/Arrow_left.svg';
   static const String iconsBellPin = 'assets/icons/Bell_pin.svg';
   static const String iconsCompany = 'assets/icons/company.svg';
-  static const String iconsDarhboard = 'assets/icons/darhboard.svg';
-  static const String iconsHomeLight = 'assets/icons/Home_light.svg';
   static const String iconsLocation = 'assets/icons/location.svg';
   static const String iconsLogo = 'assets/icons/Logo.svg';
   static const String iconsLogocard = 'assets/icons/logocard.svg';
   static const String iconsLogotext = 'assets/icons/logotext.svg';
+  static const String iconsMornung = 'assets/icons/mornung.svg';
+  static const String iconsNight = 'assets/icons/night.svg';
   static const String iconsOrder = 'assets/icons/Order.svg';
   static const String iconsUser = 'assets/icons/User.svg';
   static const String imagesCard = 'assets/images/card.svg';

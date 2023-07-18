@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class Card_option_setting extends StatelessWidget {
   const Card_option_setting({
-    super.key, required this.title, required this.Description,  this.suffixicon, required this.prefixicon,
+    super.key, required this.title,  this.Description,  this.suffixicon, required this.prefixicon,
   });
 final String title;
-final String Description;
+final String? Description;
 final IconData? suffixicon;
   final IconData prefixicon;
 
@@ -27,10 +27,11 @@ final IconData? suffixicon;
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
             children: [
               Icon(prefixicon,size: 30,color: Colors.black54,),
-              SizedBox(width: 17,),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -38,7 +39,7 @@ final IconData? suffixicon;
                 children: [
                   Text(title,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700,fontFamily: 'Quicksand'),),
 
-                  Text(Description,style: TextStyle(fontSize: 13,fontWeight: FontWeight.w500,fontFamily: 'Quicksand'),)
+                  Text(Description!,style: TextStyle(fontSize: 13,fontWeight: FontWeight.w500,fontFamily: 'Quicksand'),)
 
 
 

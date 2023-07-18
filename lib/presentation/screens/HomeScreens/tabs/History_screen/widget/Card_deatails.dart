@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:laborapplication/presentation/screens/HomeScreens/tabs/History_screen/widget/star_Rating.dart';
 import 'package:laborapplication/resources/constants.dart';
+import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
 
 import '../../../../../widgets/Custom_Button.dart';
 
@@ -11,7 +13,22 @@ class CardDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20),   padding: EdgeInsets.all(20),
+      margin: EdgeInsets.all(20),
+      padding: EdgeInsets.all(20),
+      decoration: ShapeDecoration(
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        shadows: [
+          BoxShadow(
+            color: Color(0x0C000000),
+            blurRadius: 8,
+            offset: Offset(0, 4),
+            spreadRadius: 0,
+          ),
+        ],
+      ),
       child: Column(
         children: [
           Row(
@@ -38,26 +55,33 @@ class CardDetails extends StatelessWidget {
                       fontFamily: 'Quicksand',
                       fontWeight: FontWeight.w500,
                     ),
-                  ),// Add some vertical space between the two Text widgets
+                  ), // Add some vertical space between the two Text widgets
                 ],
               ),
-
               CustomButton(
                 bordercolor: KMainColor,
                 size: 80,
                 press: () {},
                 text: 'Accept',
                 color: KMainColor,
-                height: 30, fontesiz: 12, textColor: Colors.white,
+                height: 30,
+                fontesiz: 12,
+                textColor: Colors.white,
               ),
             ],
           ),
-          Divider(thickness: 2,),
+          Divider(
+            thickness: 2,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(
-                'assets/icons/Bell_pin.svg',
+              SizedBox(
+                height: 30,
+                width: 30,
+                child: SvgPicture.asset(
+                  'assets/icons/company.svg',
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,15 +96,13 @@ class CardDetails extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 4),
-                  Text(
-                    '25ds458126fs5dha',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Quicksand',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),// Add some vertical space between the two Text widgets
+                  SmoothStarRating(
+                    color:kSecondaryColor ,
+                    borderColor: kSecondaryColor,
+                    rating: 4,
+
+                  ),
+                  SizedBox(height: 4),
                 ],
               ),
               Text(
@@ -91,16 +113,15 @@ class CardDetails extends StatelessWidget {
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w500,
                 ),
-              ),// Add some vertical space between the two Text widgets
-
+              ), // Add some vertical space between the two Text widgets
             ],
           ),
-
-          Divider(thickness: 2,),
+          Divider(
+            thickness: 2,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               Text(
                 '1 Filipino worker under contract',
                 textAlign: TextAlign.center,
@@ -110,7 +131,6 @@ class CardDetails extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-
 
               Column(
                 children: [
@@ -123,8 +143,6 @@ class CardDetails extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-
-
                   Text(
                     '1500',
                     textAlign: TextAlign.center,
@@ -136,28 +154,8 @@ class CardDetails extends StatelessWidget {
                   ),
                 ],
               ),
-          // Add some vertical space between the two Text widgets
-
+              // Add some vertical space between the two Text widgets
             ],
-          ),
-
-
-
-        ],
-      ),
-      width: 388,
-      height: 316,
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
-        shadows: [
-          BoxShadow(
-            color: Color(0x0C000000),
-            blurRadius: 8,
-            offset: Offset(0, 4),
-            spreadRadius: 0,
           ),
         ],
       ),

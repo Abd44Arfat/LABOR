@@ -24,7 +24,7 @@ class CustomFormTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: TextFormField(
-        keyboardType: TextInputType.phone,
+        keyboardType: textInputType,
             onSaved: onSaved != null
           ? (value) {
     onSaved!(value!);

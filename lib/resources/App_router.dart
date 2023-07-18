@@ -6,6 +6,10 @@ import '../presentation/screens/Auth_Screens/Register.dart';
 import '../presentation/screens/Auth_Screens/Reset_password.dart';
 import '../presentation/screens/Auth_Screens/forget_password.dart';
 import '../presentation/screens/Auth_Screens/login.dart';
+import '../presentation/screens/Book services/Book services__Screen.dart';
+import '../presentation/screens/Book services/BookService2.dart';
+import '../presentation/screens/Book services/BookServices3.dart';
+import '../presentation/screens/HomeScreens/tabs/History_screen/History_Screen.dart';
 import '../presentation/screens/HomeScreens/tabs/History_screen/tabviewbody.dart';
 import '../presentation/screens/HomeScreens/tabs/home_Screen/Home.dart';
 import '../presentation/screens/HomeScreens/tabs/Categories_Screen/categories.dart';
@@ -29,10 +33,13 @@ abstract class AppRouter {
   static const KProfileScreen='/ProfileScreen';
   static const KLoginScreen='/LoginScreen';
   static const KOTPSreen='/KOTPSreen';
+  static const KMapScreen='/MapScreen';
+  static const KBookService2='/BookService2';
+  static const KBookService3='/BookService3';
 
 
   static final router = GoRouter(routes: [
-    GoRoute(path: '/', builder: (context, State) =>  ForgetPassword()),
+    GoRoute(path: '/', builder: (context, State) =>  BookServices()),
     GoRoute(path: KChooseLanguage, builder: (context, State) => const ChooseLanguage()),
     GoRoute(path: KOnBoardingScreen, builder: (context, State) =>  OnBoardingScreen()),
     GoRoute(path: KHomeScreen, builder: (context, State) =>  HomeScreen()),
@@ -41,6 +48,9 @@ abstract class AppRouter {
     GoRoute(path: KProfileScreen, builder: (context, State) =>  ProfileScreen()),
     GoRoute(path: KLoginScreen, builder: (context, State) =>  LoginScreen()),
     GoRoute(path: KOTPSreen, builder: (context, State) =>  OTPSreen()),
+    GoRoute(path: KMapScreen, builder: (context, State) =>  MapScreen()),
+    GoRoute(path: KBookService2, builder: (context, State) =>  BookService2()),
+    GoRoute(path: KBookService3, builder: (context, State) =>  BookService3()),
 
   ]);
 
