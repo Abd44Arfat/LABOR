@@ -36,10 +36,12 @@ abstract class AppRouter {
   static const KMapScreen='/MapScreen';
   static const KBookService2='/BookService2';
   static const KBookService3='/BookService3';
+  static const KMainScreen='/MainScreen';
+  static const KBookServices='/BookServices';
 
 
   static final router = GoRouter(routes: [
-    GoRoute(path: '/', builder: (context, State) =>  BookServices()),
+    GoRoute(path: '/', builder: (context, State) =>  SplashScreen()),
     GoRoute(path: KChooseLanguage, builder: (context, State) => const ChooseLanguage()),
     GoRoute(path: KOnBoardingScreen, builder: (context, State) =>  OnBoardingScreen()),
     GoRoute(path: KHomeScreen, builder: (context, State) =>  HomeScreen()),
@@ -51,6 +53,8 @@ abstract class AppRouter {
     GoRoute(path: KMapScreen, builder: (context, State) =>  MapScreen()),
     GoRoute(path: KBookService2, builder: (context, State) =>  BookService2()),
     GoRoute(path: KBookService3, builder: (context, State) =>  BookService3()),
+    GoRoute(path: KMainScreen, builder: (context, State) =>  MainScreen()),
+    GoRoute(path: KBookServices, builder: (context, State) =>  BookServices()),
 
   ]);
 

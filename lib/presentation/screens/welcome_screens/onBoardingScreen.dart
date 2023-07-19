@@ -1,11 +1,13 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:laborapplication/presentation/widgets/Custom_Button.dart';
 import 'package:laborapplication/presentation/screens/welcome_screens/widget/Custom_page_view.dart';
 import 'package:laborapplication/presentation/screens/welcome_screens/widget/custom_dots.dart';
 import 'package:laborapplication/resources/size_config.dart';
 
+import '../../../resources/App_router.dart';
 import '../../../resources/constants.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -68,7 +70,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             size: 389,
             text: pageController!.hasClients?( pageController?.page==2 ? 'Enter':'Next'):'Next',
             color: KMainColor,
-            press: () {},
+            press: () {
+
+
+              GoRouter.of(context).go(AppRouter.KMainScreen) ;
+
+            },
             height: 60, fontesiz: 18, bordercolor: KMainColor, textColor: Colors.white,
           ),
         )

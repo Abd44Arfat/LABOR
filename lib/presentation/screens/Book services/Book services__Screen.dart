@@ -12,11 +12,8 @@ import '../../widgets/appBar.dart';
 
 class BookServices extends StatelessWidget {
   const BookServices({super.key});
-void Quickalert(BuildContext context) {
-  QuickAlert.show(context: context, type: QuickAlertType.success,title: 'Your request has been completed',confirmBtnColor: KMainColor);
 
 
-}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -347,7 +344,7 @@ Padding(
     bordercolor: KMainColor,
     text: 'welcome',
     color:KMainColor, press: () {
-    Quickalert(context);
+
 
     GoRouter.of(context).go(AppRouter.KBookService2) ;
 

@@ -46,9 +46,9 @@ class _TapCategoriesState extends State<TapCategories> with TickerProviderStateM
                     borderRadius: BorderRadius.circular(10),),
                   indicatorPadding: EdgeInsets.only(top: 40,right: 20,left: 20),
                   tabs: [
-                    Tab(text: 'Places'),
-                    Tab(text: 'Inspiration'),
-                    Tab(text: 'Emotions'),
+                    Tab(text: 'Ongoing'),
+                    Tab(text: 'Past'),
+                    Tab(text: 'Underway'),
                   ],
                 ),
               ),

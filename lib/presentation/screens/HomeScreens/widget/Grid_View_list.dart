@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../resources/App_router.dart';
 import '../tabs/home_Screen/widget/services_card.dart';
 import 'Grid_View_Item.dart';
 
@@ -60,7 +62,12 @@ class CustomGridViewList extends StatelessWidget {
 
 
 
-          press: () {}, svgSrc: items[index].svgSrc, top: 10, right: 10, left: 10,
+          press: () {
+
+
+            {GoRouter.of(context).go(AppRouter.KBookServices) ; }
+
+          }, svgSrc: items[index].svgSrc, top: 10, right: 10, left: 10,
         );
       },
     );

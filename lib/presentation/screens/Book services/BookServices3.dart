@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quickalert/models/quickalert_type.dart';
+import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 import '../../../resources/App_router.dart';
 import '../../../resources/constants.dart';
@@ -10,7 +12,15 @@ import '../../widgets/appBar.dart';
 
 class BookService3 extends StatelessWidget {
   const BookService3({super.key});
-
+  void Quickalert(BuildContext context) {
+    QuickAlert.show(
+      onConfirmBtnTap: (){GoRouter.of(context).go(AppRouter.KHomeScreen) ; },
+        context: context,
+        type: QuickAlertType.success,
+        title: 'Your request has been completed',
+        confirmBtnText: 'Home',
+        confirmBtnColor: KMainColor);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -185,8 +195,7 @@ class BookService3 extends StatelessWidget {
                   text: 'welcome',
                   color:KMainColor, press: () {
 
-
-                  GoRouter.of(context).go(AppRouter.KBookService2) ;
+                  Quickalert(context);
 
                 }, height: 60, fontesiz: 18, textColor: Colors.white,
                 )

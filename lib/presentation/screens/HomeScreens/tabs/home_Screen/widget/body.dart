@@ -72,7 +72,7 @@ class HomeBody extends StatelessWidget {
             Container(
 
 color: kThemeApp,
-              height: 190,
+              height: 238,
               width: 350,
               child: CustomGridViewList(),
             ),
